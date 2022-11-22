@@ -66,9 +66,6 @@ jQuery(document).ready(function ($) {
     })
 
 
-
-
-
     $(".other-btn").click(function () {
         $(".other-field").show();
     });
