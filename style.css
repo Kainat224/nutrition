@@ -6,9 +6,11 @@
 html {
     height: 100%;
 }
-body{
+
+body {
     font-family: "Jost", Sans-serif !important;
 }
+
 /*Background color*/
 #grad1 {
     background-image: url(https://nutriprepkitchen.com/wp-content/uploads/2022/07/pexels-ella-olsson-1640777-min-1-scaled.jpg);
@@ -20,18 +22,21 @@ body{
     min-height: 100vh;
     background-repeat: no-repeat;
 }
-.card{
+
+.card {
     background-image: url(./images/slider-bg.png);
     background-position: center center;
     background-size: cover;
     min-height: 100vh;
     background-repeat: no-repeat;
 }
-.logo{
+
+.logo {
     text-align: center;
     padding-bottom: 10px;
 }
-.logo img{
+
+.logo img {
     height: 72px;
     max-width: 177px;
 }
@@ -83,7 +88,9 @@ label.other-label {
     width: 100%;
     margin-bottom: 0.3rem;
 }
-#msform input, #msform textarea {
+
+#msform input,
+#msform textarea {
     padding: 8px 18px;
     border: none;
     border-radius: 0px;
@@ -98,43 +105,53 @@ label.other-label {
     border-radius: 30px;
     outline: none;
 }
-#msform input:focus{
+
+#msform input:focus {
     border: 2px solid #f2295b;
 }
-#msform input::placeholder,#msform textarea::placeholder{
-    color:rgb(160, 160, 160);
+
+#msform input::placeholder,
+#msform textarea::placeholder {
+    color: rgb(160, 160, 160);
 }
-#msform textarea{
+
+#msform textarea {
     width: 92%;
     height: 110px;
     border-radius: 80px;
     border: 2px solid #ccc;
     padding: 10px 45px;
 }
-.form-user label{
+
+.form-user label {
     display: inline-block;
     width: 100%;
     padding-left: 16px;
 }
-#msform .form-user input{
+
+#msform .form-user input {
     width: 100%;
     padding: 8px 23px;
     border: 2px solid #ffb538;
     border-radius: 30px;
     outline: none;
 }
-#msform .form-user input:focus{
+
+#msform .form-user input:focus {
     border: 2px solid #f2295b;
 }
+
 .weight-form .form-label {
     margin-bottom: 0.5rem;
     width: 65px;
     display: inline-block;
     text-align: right;
 }
-.weight-form.age-height .form-label{
+
+.weight-form.age-height .form-label {
     width: 95px;
 }
+
 span.form-span {
     padding-left: 10px;
 }
@@ -142,12 +159,14 @@ span.form-span {
 span.year-birth {
     position: relative;
 }
-span.year-birth i{
+
+span.year-birth i {
     position: absolute;
     right: 20px;
     top: 1px;
     color: #ffb538;
 }
+
 /*Blue Buttons*/
 #msform .action-button {
     width: 130px;
@@ -177,7 +196,9 @@ span.year-birth i{
     margin: 10px 5px;
     background-image: linear-gradient(90deg, #7c7b78 30%, #3c3636 100%);
 }
-#msform .action-button:hover,#msform .action-button-previous:hover{
+
+#msform .action-button:hover,
+#msform .action-button-previous:hover {
     box-shadow: 2px 3px 5px #ccc;
 }
 
@@ -248,10 +269,12 @@ select.list-dt:focus {
     width: 4%;
     margin-right: 44px;
 }
-#progressbar li:last-child{
+
+#progressbar li:last-child {
     border: none;
     padding-top: 0px;
 }
+
 /*Icons in the ProgressBar*/
 #progressbar #account:before {
     font-family: FontAwesome;
@@ -300,11 +323,15 @@ select.list-dt:focus {
     position: absolute;
     width: 50px;
 }
+
 /*Color number of the step and the connector before it*/
-#progressbar li.active:before, #progressbar li.active:after {
+#progressbar li.active:before,
+#progressbar li.active:after {
     border: 1px solid #ffb538;
 }
-#progressbar li:last-child::after, #progressbar li:last-child.active:after{
+
+#progressbar li:last-child::after,
+#progressbar li:last-child.active:after {
     border-bottom: none;
     border: none;
 }
@@ -315,9 +342,11 @@ select.list-dt:focus {
     margin-bottom: 15px;
     text-align: center;
 }
-.form-field{
+
+.form-field {
     text-align: center;
 }
+
 .radio {
     display: inline-block;
     border-radius: 0;
@@ -335,49 +364,60 @@ select.list-dt:focus {
     border-radius: 30px;
     width: 150px;
     text-align: center;
-    border:2px solid  #FFB538;
+    border: 2px solid #FFB538;
     color: #FFB538;
 }
-.diet-plans .radio,.restrictions .radio {
+
+.diet-plans .radio,
+.restrictions .radio {
     margin: 8px 15px;
     padding: 10px 30px;
     border-radius: 30px;
     width: 44%;
 }
-.main-goals .radio{
+
+.main-goals .radio {
     width: 100%;
     display: block;
     text-align: left;
 }
+
 .radio:hover {
-   
-    background-color:#FFB538;
+
+    background-color: #FFB538;
     color: #fff;
 }
+
 .radio.selected {
-    background-color:#FFB538;
+    background-color: #FFB538;
     color: #fff;
 }
 
 /*Fit image in bootstrap div*/
-.fit-image{
+.fit-image {
     width: 100%;
     object-fit: cover;
 }
-.other-field,.other-field-2,.other-field-3{
+
+.other-field,
+.other-field-2,
+.other-field-3 {
     display: none;
 }
+
 @media screen and (max-width: 575px) {
     #progressbar {
         margin-bottom: 20px;
         padding: 0px 10px;
         display: inline-block;
-     
+
     }
+
     #progressbar li:after {
         width: 30px;
         left: 23px;
     }
+
     #progressbar li {
         font-size: 14px;
         margin: 5px 0px;
@@ -386,43 +426,59 @@ select.list-dt:focus {
         width: 8%;
         margin-right: 27px;
     }
+
     #progressbar li:before {
         width: 30px;
         height: 31px;
         line-height: 29px;
         font-size: 16px;
     }
-    .weight-form .form-label,.weight-form.age-height .form-label {
+
+    .weight-form .form-label,
+    .weight-form.age-height .form-label {
         margin-bottom: 0rem;
         width: 100%;
         display: inline-block;
         text-align: left;
         padding-left: 10px;
     }
+
     .fs-title {
         font-size: 18px;
     }
+
     #msform fieldset .form-card {
-        padding: 20px 15px 30px 15px; 
+        padding: 20px 15px 30px 15px;
     }
-    .radio{
+
+    .radio {
         padding: 6px 20px;
         font-size: 14px;
         width: auto;
     }
-    .meals .radio{
+
+    .meals .radio {
         width: 30%;
     }
+
     .fit-image {
         width: 46%;
     }
+
     #msform input {
         width: 150px;
     }
-    .diet-plans .radio, .restrictions .radio {
+
+    .diet-plans .radio,
+    .restrictions .radio {
         margin: 8px 5px;
         padding: 6px 10px;
         border-radius: 30px;
         width: 45%;
     }
+}
+
+.radio.selected {
+    background-color: #FFB538;
+    color: #fff;
 }
