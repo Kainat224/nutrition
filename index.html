@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+</head>
+
+<body>
+    <main>
+        <!-- MultiStep Form -->
+
+        <div id="grad1">
+            <div class="container">
+
+                <div class="col-lg-10 mx-auto text-center p-0 mt-3">
+                    <div class="card-bg">
+
+                        <div class="card-wrap">
+                            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                                <div class="logo">
+                                    <img src="./images/logo.svg">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 mx-0">
+                                        <form id="msform" onsubmit="return validateForm()" method="post">
+                                            <!-- progressbar -->
+                                            <ul id="progressbar">
+                                                <li class="active" id="gender">1</li>
+                                                <li id="goals">2</li>
+                                                <li id="weight">3</li>
+                                                <li id="age-height">4</li>
+                                                <li id="diet">5</li>
+                                                <li id="challenge">6</li>
+                                                <li id="meals">7</li>
+                                                <li id="dietary-restrictions">8</li>
+                                                <li id="Nutritionist">9</li>
+                                                <li id="user-info">10</li>
+                                                <li id="confirm">Finish</li>
+                                            </ul>
+                                            <!-- fieldsets -->
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">What sex best describes you?</h2>
+
+                                                    <div class="radio-group">
+
+
+                                                        <div class='radio' data-value="male" checked><span
+                                                                class="radio-btns">Male</span>
+                                                        </div>
+                                                        <div class='radio' data-value="female"><span
+                                                                class="radio-btns">Female</span></div>
+                                                        <div class='radio' data-value="other"><span
+                                                                class="radio-btns">Other</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <input type="button" name="next" class="next action-button"
+                                                    value="Next" />
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">What are your main goals?</h2>
+
+                                                    <div class="radio-group main-goals">
+                                                        <div class='radio' data-value="male" selected><span
+                                                                class="radio-btns">Lose weight
+                                                                and feel better</span></div>
+                                                        <div class='radio' data-value="female"><span
+                                                                class="radio-btns">Prevent
+                                                                disease and improve the overall health</span></div>
+                                                        <div class='radio' data-value="other"><span
+                                                                class="radio-btns">Treat a
+                                                                specific health condition (e.g Type 2 diabetes, IBS,
+                                                                PCOS,
+                                                                etc.)</span></div>
+                                                        <div class='radio' data-value="other"><span
+                                                                class="radio-btns">Have a
+                                                                bespoke meal plan by a Registered Nutritionist</span>
+                                                        </div>
+                                                        <div class='radio' data-value="other"><span
+                                                                class="radio-btns">Cooking
+                                                                inspiration</span></div>
+                                                        <div class='radio' data-value="other"><span
+                                                                class="radio-btns">Save time on
+                                                                preparing meals</span></div>
+
+                                                    </div>
+                                                </div>
+                                                <input type="button" name="previous"
+                                                    class="previous action-button-previous" value="Previous" />
+                                                <input type="button" name="next" class="next action-button"
+                                                    value="Next" />
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">What is your current and target weight?</h2>
+
+                                                    <div class="weight-form">
+                                                        <div class="form-field">
+
+                                                            <input type="number" placeholder="Current Weight"
+                                                                name="current_weight" required />
+                                                            <span class="form-span">Imperial/Metric</span>
+                                                        </div>
+                                                        <div class="form-field">
+
+                                                            <input type="number" placeholder="Target Weight"
+                                                                name="target_weight" required />
+                                                            <span class="form-span">Imperial/Metric</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <input type="button" name="previous"
+                                                    class="previous action-button-previous" value="Previous" />
+                                                <input type="button" name="next" class="next action-button"
+                                                    value="Next" />
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">What is your age and height?</h2>
+
+                                                    <div class="weight-form age-height">
+
+
+                                                        <div class="form-field">
+
+                                                            <span class="year-birth">
+                                                                <input type="text" name="birthday" value="" required />
+                                                                <i class="fa fa-calendar"></i> </span>
+                                                            <span class="form-span">Year of Birth</span>
+                                                        </div>
+                                                        <div class="form-field">
+
+                                                            <input style="margin-left:18px" type="number"
+                                                                placeholder="Height" name="height" required />
+                                                            <span class="form-span">Imperial/Metric</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <input type="button" name="previous"
+                                                    class="previous action-button-previous" value="Previous" />
+                                                <input type="button" name="next" class="next action-button"
+                                                    value="Next" />
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">Have you previously tried any diets or meal
+                                                        plans?</h2>
+
+                                                    <div class="radio-group diet-plans">
+                                                        <div class='radio my-tooggle' data-value="Keto" selected><span
+                                                                class="radio-btns">Keto</span>
+                                                        </div>
+                                                        <div class='radio my-tooggle' data-value="Low-FODMAP"><span
+                                                                class="radio-btns">Low-FODMAP</span></div>
+                                                        <div class='radio my-tooggle' data-value="intermittent-fasting">
+                                                            <span class="radio-btns">Intermittent Fasting</span>
+                                                        </div>
+                                                        <div class='radio my-tooggle' data-value="low-gi-diet"><span
+                                                                class="radio-btns">Low-GI
+                                                                Diet</span></div>
+                                                        <div class='radio my-tooggle' data-value="paleo"><span
+                                                                class="radio-btns">Paleo</span>
+                                                        </div>
+                                                        <div class='radio other-btn' data-value="other"><span
+                                                                class="radio-btns">Other</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-field other-field">
+                                                        <textarea type="text" placeholder="Write Detail"
+                                                            name="others"></textarea>
+                                                    </div>
+                                                </div>
+                                                <input type="button" name="previous"
+                                                    class="previous action-button-previous" value="Previous" />
+                                                <input type="button" name="next" class="next action-button"
+                                                    value="Next" />
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">If you've tried dieting before, what was your
+                                                        biggest
+                                                        challenge?</h2>
+
+                                                    <div class="radio-group main-goals">
+                                                        <div class='radio' data-value="Keto" selected><span
+                                                                class="radio-btns">I
+                                                                had cravings
+                                                                for foods I wasn't allowed</span></div>
+                                                        <div class='radio' data-value="Low-FODMAP"><span
+                                                                class="radio-btns">Unsatisfied with my meals</span>
+                                                        </div>
+                                                        <div class='radio' data-value="intermittent-fasting"><span
+                                                                class="radio-btns">I was too hungry</span></div>
+                                                        <div class='radio' data-value="low-gi-diet"><span
+                                                                class="radio-btns">Limited
+                                                                options</span></div>
+                                                        <div class='radio' data-value="paleo"><span
+                                                                class="radio-btns">N/A</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <input type="button" name="previous"
+                                                    class="previous action-button-previous" value="Previous" />
+                                                <input type="button" name="next" class="next action-button"
+                                                    value="Next" />
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">How many meals do you have a day?</h2>
+
+                                                    <div class="radio-group meals">
+                                                        <div class='radio' data-value="one" selected><span
+                                                                class="radio-btns">1</span></div>
+                                                        <div class='radio' data-value="two"><span class="radio-btns">2
+                                                        </div>
+                                                        <div class='radio' data-value="three"><span
+                                                                class="radio-btns">3</span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <input type="button" name="previous"
+                                                    class="previous action-button-previous" value="Previous" />
+                                                <input type="button" name="next" class="next action-button"
+                                                    value="Next" />
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">Do you have any dietary restrictions?</h2>
+
+                                                    <div class="radio-group restrictions">
+                                                        <div class='radio other-btn-2' data-value="food_intolerances"
+                                                            selected>
+                                                            <span class="radio-btns">Food Intolerances</span>
+                                                        </div>
+                                                        <div class="form-field other-field-2">
+                                                            <textarea type="text" placeholder="Write Detail"
+                                                                name="others"></textarea>
+                                                        </div>
+                                                        <div class='radio other-btn-3' data-value="food_intolerances">
+                                                            <span class="radio-btns">Allergies</span>
+                                                        </div>
+                                                        <div class="form-field other-field-3">
+                                                            <textarea type="text" placeholder="Write Detail"
+                                                                name="others"></textarea>
+                                                        </div>
+                                                        <div class='radio my-new-toggle' data-value="Halal"><span
+                                                                class="radio-btns">Halal</span>
+                                                        </div>
+                                                        <div class='radio my-new-toggle' data-value="Kosher"><span
+                                                                class="radio-btns">Kosher</span></div>
+                                                        <div class='radio my-new-toggle' data-value="Vegan"><span
+                                                                class="radio-btns">Vegan</span>
+                                                        </div>
+                                                        <div class='radio my-new-toggle' data-value="Vegetarian"><span
+                                                                class="radio-btns">Vegetarian</span></div>
+                                                    </div>
+
+                                                </div>
+                                                <input type="button" name="previous"
+                                                    class="previous action-button-previous" value="Previous" />
+                                                <input type="button" name="next" class="next action-button"
+                                                    value="Next" />
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">Are you committed to meeting with a Registered
+                                                        Nutritionist regularly for bespoke meal plans?</h2>
+
+                                                    <div class="radio-group main-goals">
+                                                        <div class='radio' data-value="Halal" selected><span
+                                                                class="radio-btns">Yes, I'm
+                                                                ready to make a change!</span>
+                                                        </div>
+                                                        <div class='radio' data-value="Vegan"><span
+                                                                class="radio-btns">No, I just
+                                                                want the food!</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <input type="button" name="previous"
+                                                    class="previous action-button-previous" value="Previous" />
+                                                <input type="button" name="next" class="next action-button"
+                                                    value="Next" />
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title">User Information?</h2>
+                                                    <div class="row form-user">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-field">
+
+                                                                <input type="text" name="first_name"
+                                                                    placeholder="First Name" required />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-field">
+
+                                                                <input type="text" name="last_name"
+                                                                    placeholder="Last Name" required />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-field">
+
+                                                                <input type="email" name="Email"
+                                                                    placeholder="Email Address" required />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-field">
+
+                                                                <input type="number" name="phone"
+                                                                    placeholder="Phone No." required />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <input type="button" name="previous"
+                                                    class="previous action-button-previous" value="Previous" />
+                                                <input type="button" name="next" class="next action-button"
+                                                    value="Next" />
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-card">
+                                                    <h2 class="fs-title text-center"> Calculating your Meal Plans</h2>
+                                                    <br><br>
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-sm-3 text-center">
+                                                            <img src="images/loader.gif" class="fit-image" />
+                                                            <!-- <img src="https://img.icons8.com/color/96/000000/ok--v2.png"
+                                                                class="fit-image"> -->
+                                                        </div>
+                                                    </div>
+                                                    <br><br>
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-md-7 text-center">
+                                                            <h5 style="font-weight: 700;">...But first! Book your
+                                                                appointment slot with our In-house registered
+                                                                Nutritionists</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script src="main.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <script>
+        $(function () {
+            $('input[name="birthday"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                minYear: 1901,
+                maxYear: parseInt(moment().format('YYYY'), 10)
+            }, function (start, end, label) {
+                var years = moment().diff(start, 'years');
+                alert("You are " + years + " years old!");
+            });
+        });
+    </script>
+</body>
+
+</html>

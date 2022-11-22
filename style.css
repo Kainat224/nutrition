@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+body{
+    font-family: "Jost", Sans-serif !important;
+}
+/*Background color*/
+#grad1 {
+    background-image: url(https://nutriprepkitchen.com/wp-content/uploads/2022/07/pexels-ella-olsson-1640777-min-1-scaled.jpg);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+.card{
+    background-image: url(./images/slider-bg.png);
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+.logo{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.logo img{
+    height: 72px;
+    max-width: 177px;
+}
+
+/*form styles*/
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+#msform fieldset .form-card {
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 20px 15px 30px 15px;
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 3% 20px 3%;
+    position: relative;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+#msform fieldset {
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #6e6d6d;
+}
+
+label.other-label {
+    width: 100%;
+    margin-bottom: 0.3rem;
+}
+#msform input, #msform textarea {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 150px;
+    box-sizing: border-box;
+    color: #6e6d6d;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: 2px solid #ffb538;
+    border-radius: 30px;
+    outline: none;
+}
+#msform input:focus{
+    border: 2px solid #f2295b;
+}
+#msform input::placeholder,#msform textarea::placeholder{
+    color:rgb(160, 160, 160);
+}
+#msform textarea{
+    width: 92%;
+    height: 110px;
+    border-radius: 80px;
+    border: 2px solid #ccc;
+    padding: 10px 45px;
+}
+.form-user label{
+    display: inline-block;
+    width: 100%;
+    padding-left: 16px;
+}
+#msform .form-user input{
+    width: 100%;
+    padding: 8px 23px;
+    border: 2px solid #ffb538;
+    border-radius: 30px;
+    outline: none;
+}
+#msform .form-user input:focus{
+    border: 2px solid #f2295b;
+}
+.weight-form .form-label {
+    margin-bottom: 0.5rem;
+    width: 65px;
+    display: inline-block;
+    text-align: right;
+}
+.weight-form.age-height .form-label{
+    width: 95px;
+}
+span.form-span {
+    padding-left: 10px;
+}
+
+span.year-birth {
+    position: relative;
+}
+span.year-birth i{
+    position: absolute;
+    right: 20px;
+    top: 1px;
+    color: #ffb538;
+}
+/*Blue Buttons*/
+#msform .action-button {
+    width: 130px;
+    font-weight: bold;
+    color: white;
+    border: 0 none !important;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 14px 17px;
+    margin: 10px 5px;
+    font-size: 18px;
+    background-image: linear-gradient(90deg, #FFB538 30%, #f2295b 100%);
+}
+
+/*Previous Buttons*/
+#msform .action-button-previous {
+    width: 130px;
+    font-size: 18px;
+    background: #616161;
+    font-weight: bold;
+    border: 0 none !important;
+    color: white;
+    border: 0 none;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 14px 17px;
+    margin: 10px 5px;
+    background-image: linear-gradient(90deg, #7c7b78 30%, #3c3636 100%);
+}
+#msform .action-button:hover,#msform .action-button-previous:hover{
+    box-shadow: 2px 3px 5px #ccc;
+}
+
+/*Dropdown List Exp Date*/
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px;
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue;
+}
+
+/*The background card*/
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+/*FieldSet headings*/
+.fs-title {
+    font-size: 26px;
+    color: #2C3E50;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*progressbar*/
+#progressbar {
+    margin-bottom: 20px;
+    overflow: hidden;
+    color: #afacac;
+    padding: 0px 20px;
+    display: flex;
+    /* flex-wrap: nowrap; */
+    text-align: center;
+    width: 100%;
+    margin-left: 3%;
+}
+
+#progressbar .active {
+    color: #ffb538;
+    border: 2px solid #ffb538;
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 16px;
+    float: left;
+    position: relative;
+    font-family: "Jost", Sans-serif;
+    font-weight: 600;
+    margin: 0px 0px;
+    padding: 5px 0px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #d3d3d3;
+    margin-right: 10px;
+    align-items: center;
+    vertical-align: middle;
+    height: 35px;
+    width: 4%;
+    margin-right: 44px;
+}
+#progressbar li:last-child{
+    border: none;
+    padding-top: 0px;
+}
+/*Icons in the ProgressBar*/
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f023";
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007";
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f09d";
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c";
+}
+
+/*ProgressBar before any progress*/
+#progressbar li:before {
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px;
+    background-image: linear-gradient(90deg, #FFB538 30%, #f2295b 100%) !important;
+}
+
+/*ProgressBar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    width: 100%;
+    border-bottom: 2px solid #d3d3d3;
+    left: 33px;
+    top: 14px;
+    z-index: -1;
+    position: absolute;
+    width: 50px;
+}
+/*Color number of the step and the connector before it*/
+#progressbar li.active:before, #progressbar li.active:after {
+    border: 1px solid #ffb538;
+}
+#progressbar li:last-child::after, #progressbar li:last-child.active:after{
+    border-bottom: none;
+    border: none;
+}
+
+/*Imaged Radio Buttons*/
+.radio-group {
+    position: relative;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.form-field{
+    text-align: center;
+}
+.radio {
+    display: inline-block;
+    border-radius: 0;
+    /* background: lightblue;
+    box-shadow: 0 2px 2px 2px rgb(0 0 0 / 20%); */
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 2px;
+    font-family: "Jost", Sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 30px;
+    width: 150px;
+    text-align: center;
+    border:2px solid  #FFB538;
+    color: #FFB538;
+}
+.diet-plans .radio,.restrictions .radio {
+    margin: 8px 15px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    width: 44%;
+}
+.main-goals .radio{
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+.radio:hover {
+   
+    background-color:#FFB538;
+    color: #fff;
+}
+.radio.selected {
+    background-color:#FFB538;
+    color: #fff;
+}
+
+/*Fit image in bootstrap div*/
+.fit-image{
+    width: 100%;
+    object-fit: cover;
+}
+.other-field,.other-field-2,.other-field-3{
+    display: none;
+}
+@media screen and (max-width: 575px) {
+    #progressbar {
+        margin-bottom: 20px;
+        padding: 0px 10px;
+        display: inline-block;
+     
+    }
+    #progressbar li:after {
+        width: 30px;
+        left: 23px;
+    }
+    #progressbar li {
+        font-size: 14px;
+        margin: 5px 0px;
+        padding: 3px 0px;
+        height: 30px;
+        width: 8%;
+        margin-right: 27px;
+    }
+    #progressbar li:before {
+        width: 30px;
+        height: 31px;
+        line-height: 29px;
+        font-size: 16px;
+    }
+    .weight-form .form-label,.weight-form.age-height .form-label {
+        margin-bottom: 0rem;
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        padding-left: 10px;
+    }
+    .fs-title {
+        font-size: 18px;
+    }
+    #msform fieldset .form-card {
+        padding: 20px 15px 30px 15px; 
+    }
+    .radio{
+        padding: 6px 20px;
+        font-size: 14px;
+        width: auto;
+    }
+    .meals .radio{
+        width: 30%;
+    }
+    .fit-image {
+        width: 46%;
+    }
+    #msform input {
+        width: 150px;
+    }
+    .diet-plans .radio, .restrictions .radio {
+        margin: 8px 5px;
+        padding: 6px 10px;
+        border-radius: 30px;
+        width: 45%;
+    }
+}
