@@ -483,6 +483,30 @@ select.list-dt:focus {
     color: #fff;
 }
 
-#current_weeight {
+.error-color {
     color: red;
+}
+
+span#current_weeight {
+    margin-left: -120px;
+}
+
+input#currentww {
+    margin-bottom: 8px;
+}
+
+span#targget_weight {
+    margin-left: -120px;
+}
+
+input#targgetww {
+    margin-bottom: 8px;
+}
+
+span#heigght_error {
+    margin-left: -100px;
+}
+
+input#heigght {
+    margin-bottom: 8px;
 }

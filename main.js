@@ -89,13 +89,47 @@ jQuery(document).ready(function ($) {
 
     $('#button-validate').click(function () {
         var current_weeight = '';
-        var current_weeight = '';
+        var targget_weight = '';
+
 
         if ($.trim($('#currentww').val()).length == 0) {
             current_weeight = 'This field is required';
             $('#current_weeight').text(current_weeight);
+        }
+        else {
+            current_weeight = '';
+            $('#current_weeight').text(current_weeight);
 
         }
-    })
+
+        if ($.trim($('#targgetww').val()).length == 0) {
+            targget_weight = 'This field is required';
+            $('#targget_weight').text(targget_weight);
+        }
+        else {
+            targget_weight = '';
+            $('#targget_weight').text(targget_weight);
+
+        }
+
+    });
+
+    $('#birth_btn_validate').click(function () {
+        var heigght_error = '';
+
+
+        if ($.trim($('#heigght').val()).length == 0) {
+            heigght_error = 'This field is required';
+            $('#heigght_error').text(heigght_error);
+        }
+        else {
+            heigght_error = '';
+            $('#heigght_error').text(heigght_error);
+
+        }
+    });
+
+
+
 
 });

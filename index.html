@@ -112,17 +112,18 @@
                                                         <div class="form-field">
 
                                                             <input type="number" placeholder="Current Weight"
-                                                                name="current_weight" min="1" max="5000"
-                                                                id="currentww" />
+                                                                name="current_weight" min="1" max="5000" id="currentww"
+                                                                class="error-dessign" />
                                                             <span class="form-span">Imperial/Metric</span><br>
-                                                            <span id="current_weeight"></span>
+                                                            <span id="current_weeight" class="error-color"></span>
                                                         </div>
                                                         <div class="form-field">
 
                                                             <input type="number" placeholder="Target Weight"
-                                                                name="target_weight" min="1" max="5000" required />
-                                                            <span class="form-span">Imperial/Metric</span>
-                                                            <span id="targget-weight"></span>
+                                                                name="target_weight" min="1" max="5000"
+                                                                id="targgetww" />
+                                                            <span class="form-span">Imperial/Metric</span><br>
+                                                            <span id="targget_weight" class="error-color"></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -148,15 +149,16 @@
 
                                                             <input style="margin-left:18px" type="number"
                                                                 placeholder="Height" name="height" min="1" max="5000"
-                                                                required />
-                                                            <span class="form-span">Imperial/Metric</span>
+                                                                id="heigght" />
+                                                            <span class="form-span">Imperial/Metric</span><br>
+                                                            <span id="heigght_error" class="error-color"></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <input type="button" name="previous"
                                                     class="previous action-button-previous" value="Previous" />
-                                                <input type="button" name="next" class="next action-button"
-                                                    value="Next" />
+                                                <input type="button" name="next" id="birth_btn_validate"
+                                                    class="next action-button" value="Next" />
                                             </fieldset>
                                             <fieldset>
                                                 <div class="form-card">
