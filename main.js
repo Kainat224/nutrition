@@ -116,6 +116,7 @@ jQuery(document).ready(function ($) {
 
     $('#birth_btn_validate').click(function () {
         var heigght_error = '';
+        var birth_error = '';
 
 
         if ($.trim($('#heigght').val()).length == 0) {
@@ -125,6 +126,18 @@ jQuery(document).ready(function ($) {
         else {
             heigght_error = '';
             $('#heigght_error').text(heigght_error);
+
+        }
+
+
+
+        if ($.trim($('#birthh').val()).length == 0) {
+            birth_error = 'This field is required';
+            $('#birth_error').text(birth_error);
+        }
+        else {
+            birth_error = '';
+            $('#birth_error').text(birth_error);
 
         }
     });
