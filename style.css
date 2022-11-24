@@ -482,3 +482,7 @@ select.list-dt:focus {
     background-color: #FFB538;
     color: #fff;
 }
+
+#current_weeight {
+    color: red;
+}

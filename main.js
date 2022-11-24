@@ -86,4 +86,16 @@ jQuery(document).ready(function ($) {
     $(".my-new-toggle").click(function () {
         $(".other-field-3").hide();
     });
+
+    $('#button-validate').click(function () {
+        var current_weeight = '';
+        var current_weeight = '';
+
+        if ($.trim($('#currentww').val()).length == 0) {
+            current_weeight = 'This field is required';
+            $('#current_weeight').text(current_weeight);
+
+        }
+    })
+
 });

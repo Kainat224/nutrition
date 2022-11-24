@@ -112,28 +112,30 @@
                                                         <div class="form-field">
 
                                                             <input type="number" placeholder="Current Weight"
-                                                                name="current_weight" min="1" max="5000" required />
-                                                            <span class="form-span">Imperial/Metric</span>
+                                                                name="current_weight" min="1" max="5000"
+                                                                id="currentww" />
+                                                            <span class="form-span">Imperial/Metric</span><br>
+                                                            <span id="current_weeight"></span>
                                                         </div>
                                                         <div class="form-field">
 
                                                             <input type="number" placeholder="Target Weight"
                                                                 name="target_weight" min="1" max="5000" required />
                                                             <span class="form-span">Imperial/Metric</span>
+                                                            <span id="targget-weight"></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <input type="button" name="previous"
                                                     class="previous action-button-previous" value="Previous" />
-                                                <input type="button" name="next" class="next action-button"
-                                                    value="Next" />
+                                                <input type="button" name="next" id="button-validate"
+                                                    class="next action-button" value="Next" />
                                             </fieldset>
                                             <fieldset>
                                                 <div class="form-card">
                                                     <h2 class="fs-title">What is your age and height?</h2>
 
                                                     <div class="weight-form age-height">
-
 
                                                         <div class="form-field">
 
