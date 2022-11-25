@@ -34,7 +34,9 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 mx-0">
-                                        <form id="msform" name="myForm" method="post">
+                                        <form id="msform" name="myForm" onsubmit="sendmail(); reset(); return false;"
+                                            method="post">
+                                            <!-- <form id="msform" name="myForm" action="javascript:sendmail()" method="post"> -->
                                             <!-- progressbar -->
                                             <ul id="progressbar">
                                                 <li class="active" id="gender">1</li>
@@ -120,8 +122,8 @@
                                                         <div class="form-field">
 
                                                             <input type="number" placeholder="Target Weight"
-                                                                name="target_weight" min="1" max="5000"
-                                                                id="targgetww" />
+                                                                name="target_weight" min="1" max="5000" id="targgetww"
+                                                                autocomplete="off" />
                                                             <span class="form-span">Imperial/Metric</span><br>
                                                             <span id="targget_weight" class="error-color"></span>
                                                         </div>
@@ -129,7 +131,7 @@
                                                 </div>
                                                 <input type="button" name="previous"
                                                     class="previous action-button-previous" value="Previous" />
-                                                <input type="button" name="next" id="button-validate"
+                                                <input type="button" name="next" id="button-validate" id="btnn_validate"
                                                     class="next action-button" value="Next" />
                                             </fieldset>
                                             <fieldset>
@@ -313,28 +315,29 @@
                                                             <div class="form-field">
 
                                                                 <input type="text" name="first_name"
-                                                                    placeholder="First Name" required />
+                                                                    placeholder="First Name" id="fname" required />
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <div class="form-field">
 
                                                                 <input type="text" name="last_name"
-                                                                    placeholder="Last Name" required />
+                                                                    placeholder="Last Name" id="lname" required />
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <div class="form-field">
 
                                                                 <input type="email" name="Email"
-                                                                    placeholder="Email Address" required />
+                                                                    placeholder="Email Address" id="emailadd"
+                                                                    required />
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <div class="form-field">
 
                                                                 <input type="phone" name="phone" placeholder="Phone No."
-                                                                    required />
+                                                                    id="pphone" required />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -382,14 +385,16 @@
 
     </main>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-
+    <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="main.js"></script>
 
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script>
         $(function () {
