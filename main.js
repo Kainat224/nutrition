@@ -95,17 +95,19 @@ jQuery(document).ready(function ($) {
         if ($.trim($('#currentww').val()).length == 0) {
             current_weeight = 'This field is required';
             $('#current_weeight').text(current_weeight);
-
+            // $('#button-validate').attr('disabled', 'disabled');
         }
         else {
             current_weeight = '';
             $('#current_weeight').text(current_weeight);
+            // $('#button-validate').removeAttr('disabled');
 
         }
 
         if ($.trim($('#targgetww').val()).length == 0) {
             targget_weight = 'This field is required';
             $('#targget_weight').text(targget_weight);
+
         }
         else {
             targget_weight = '';
@@ -143,27 +145,8 @@ jQuery(document).ready(function ($) {
 
 
 
-    function sendmail() {
-        var firstName = $('#fname').val();
-        var lastName = $('#lname').val();
-        var emailAddress = $('#emailadd').val();
-        var phoneNum = $('#pphone').val();
 
-        var boddy = 'First Name: ' + firstName + 'Last Name: ' + lastName
-        'Email Address: ' + emailAddress + 'Phone Number' + phoneNum;
 
-        Email.send({
-            Host: "smtp.gmail.com",
-            Username: "anmolkainat244@gmail.com",
-            Password: "75A3749FCFCF0C8E665F48E69A66D64F7C06",
-            To: 'anmolkainat244@gmail.com',
-            From: "anmolkainat244@gmail.com",
-            Subject: "New mail form: " + firstName,
-            Body: boddy
-        }).then(
-            message => alert(message)
-        );
-    }
 
 
 

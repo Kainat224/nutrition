@@ -34,8 +34,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 mx-0">
-                                        <form id="msform" name="myForm" onsubmit="sendmail(); reset(); return false;"
-                                            method="post">
+                                        <form id="msform" name="myForm" method="post">
                                             <!-- <form id="msform" name="myForm" action="javascript:sendmail()" method="post"> -->
                                             <!-- progressbar -->
                                             <ul id="progressbar">
@@ -56,48 +55,63 @@
                                                 <div class="form-card">
                                                     <h2 class="fs-title">What sex best describes you?</h2>
 
-                                                    <div class="radio-group">
+                                                    <div class="radio-group" id="gender">
 
-                                                        <div class='radio selected' data-value="male"><span
-                                                                class="radio-btns" name="fname">Male</span>
-                                                        </div>
-                                                        <div class='radio' data-value="female"><span class="radio-btns"
-                                                                name="fname">Female</span></div>
-                                                        <div class='radio' data-value="other"><span class="radio-btns"
-                                                                name="fname">Other</span>
-                                                        </div>
+                                                        <label class='radio selected' data-value="male"><input
+                                                                type="radio" class="radio-btns" name="fname"
+                                                                value="Male">Male
+                                                        </label>
+                                                        <label class='radio' data-value="female"><input type="radio"
+                                                                class="radio-btns" name="fname" value="FeMale">Female
+                                                        </label>
+                                                        <label class='radio' data-value="other"><input type="radio"
+                                                                class="radio-btns" name="fname" value="Other">Other
+                                                        </label>
 
                                                     </div>
                                                 </div>
-                                                <input type="button" name="next" class="next action-button"
-                                                    value="Next" />
+                                                <input type="button" name="next" class="next action-button" value="Next"
+                                                    id="genderNext" />
                                             </fieldset>
                                             <fieldset>
                                                 <div class="form-card">
                                                     <h2 class="fs-title">What are your main goals?</h2>
 
                                                     <div class="radio-group main-goals">
-                                                        <div class='radio selected' data-value="male"><span
-                                                                class="radio-btns">Lose weight
-                                                                and feel better</span></div>
-                                                        <div class='radio' data-value="female"><span
-                                                                class="radio-btns">Prevent
-                                                                disease and improve the overall health</span></div>
-                                                        <div class='radio' data-value="other"><span
-                                                                class="radio-btns">Treat a
+                                                        <label class='radio selected' data-value="male"><input
+                                                                type="radio" name="goals"
+                                                                value="Lose weight and feel better"
+                                                                class="radio-btns">Lose weight and feel better
+                                                        </label>
+                                                        <label class='radio' data-value="female"><input type="radio"
+                                                                name="goals" class="radio-btns"
+                                                                value="Prevent disease and improve the overall health">Prevent
+                                                            disease and improve the overall health
+                                                        </label>
+                                                        <label class='radio' data-value="other"><input type="radio"
+                                                                name="goals" class="radio-btns" value="Treat a
                                                                 specific health condition (e.g Type 2 diabetes, IBS,
                                                                 PCOS,
-                                                                etc.)</span></div>
-                                                        <div class='radio' data-value="other"><span
-                                                                class="radio-btns">Have a
-                                                                bespoke meal plan by a Registered Nutritionist</span>
-                                                        </div>
-                                                        <div class='radio' data-value="other"><span
-                                                                class="radio-btns">Cooking
-                                                                inspiration</span></div>
-                                                        <div class='radio' data-value="other"><span
-                                                                class="radio-btns">Save time on
-                                                                preparing meals</span></div>
+                                                                etc.)">Treat a
+                                                            specific health condition (e.g Type 2 diabetes, IBS,
+                                                            PCOS,
+                                                            etc.)
+                                                        </label>
+                                                        <label class='radio' data-value="other"><input type="radio"
+                                                                name="goals" class="radio-btns"
+                                                                value="Have a bespoke meal plan by a Registered Nutritionist">Have
+                                                            a bespoke meal plan by a Registered Nutritionist
+                                                        </label>
+                                                        <label class='radio' data-value="other"><input type="radio"
+                                                                name="goals" class="radio-btns"
+                                                                value="Cooking inspiration">Cooking
+                                                            inspiration
+                                                        </label>
+                                                        <label class='radio' data-value="other"><input type="radio"
+                                                                name="goals" class="radio-btns"
+                                                                value="Save time on preparing meals">Save time on
+                                                            preparing meals
+                                                        </label>
 
                                                     </div>
                                                 </div>
@@ -115,7 +129,7 @@
 
                                                             <input type="number" placeholder="Current Weight"
                                                                 name="current_weight" min="1" max="5000" id="currentww"
-                                                                class="error-dessign" />
+                                                                class="error-dessign" required />
                                                             <span class="form-span">Imperial/Metric</span><br>
                                                             <span id="current_weeight" class="error-color"></span>
                                                         </div>
@@ -123,7 +137,7 @@
 
                                                             <input type="number" placeholder="Target Weight"
                                                                 name="target_weight" min="1" max="5000" id="targgetww"
-                                                                autocomplete="off" />
+                                                                autocomplete="off" required />
                                                             <span class="form-span">Imperial/Metric</span><br>
                                                             <span id="targget_weight" class="error-color"></span>
                                                         </div>
@@ -131,7 +145,7 @@
                                                 </div>
                                                 <input type="button" name="previous"
                                                     class="previous action-button-previous" value="Previous" />
-                                                <input type="button" name="next" id="button-validate" id="btnn_validate"
+                                                <input type="submit" name="next" id="button-validate"
                                                     class="next action-button" value="Next" />
                                             </fieldset>
                                             <fieldset>
@@ -345,8 +359,8 @@
                                                 </div>
                                                 <input type="button" name="previous"
                                                     class="previous action-button-previous" value="Previous" />
-                                                <a href="#lastpagee"><input type="submit" value="Submit"
-                                                        class="action-button" /></a>
+                                                <input type="submit" value="Submit" onclick="sendmail()"
+                                                    class="action-button" />
                                             </fieldset>
                                             <fieldset id="lastpagee">
                                                 <div class="form-card">
@@ -385,16 +399,17 @@
 
     </main>
 
+
+
     <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="main.js"></script>
-
-
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 
     <script>
         $(function () {
@@ -408,6 +423,53 @@
                 alert("You are " + years + " years old!");
             });
         });
+
+        var genderValue;
+        var goalsValue;
+        function radioVal() {
+            $("input[type='button']").click(function () {
+                var genderValue = $("input[name='fname']:checked").val();
+                var goalsValue = $("input[name='goals']:checked").val();
+                // if (genderValue) {
+                //     alert("Your are a - " + genderValue);
+                // }
+            });
+        };
+
+
+        function sendmail() {
+            // debugger
+
+            var firstName = $('#fname').val();
+            var lastName = $('#lname').val();
+            var email = $('#emailadd').val();
+            var contact = $('#pphone').val();
+
+            var genRadioVal = genderValue;
+            var goalsRadioValue = goalsValue;
+
+
+
+            var body = 'What sex best describes you? ' + genRadioVal
+                + '<br>What are your main goals? ' + goalsRadioValue
+                + '<br>First Name: ' + firstName
+                + '<br>Last Name: ' + lastName
+                + '<br>Email: ' + email
+                + '<br>Phone: ' + contact + '<br>';
+
+
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "anmolkainat244@gmail.com",
+                Password: "75A3749FCFCF0C8E665F48E69A66D64F7C06",
+                To: 'anmolkainat244@gmail.com',
+                From: "anmolkainat244@gmail.com",
+                Subject: "New mail form: " + firstName,
+                Body: body
+            }).then(message => {
+                alert(message)
+            });
+        }
     </script>
 </body>
 
